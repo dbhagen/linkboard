@@ -12,63 +12,33 @@ import {
 } from "react-bootstrap-icons";
 
 const data: Data = {
-  title: "Frank's Linkboard",
+  title: "Hagen Baby Boy Shower Site",
   theme: "default",
   animation: {
     nameRandomizer: false,
   },
-  name: "Frank Borisjuk",
-  description: "Software Engineer",
+  name: "Hagen Baby Shower",
+  description: "Welcome to the official baby shower site for Hagen! Here you'll find all the details about the upcoming celebration, including date, location, and gift ideas. We're excited to share this special moment with friends and family. Join us in celebrating the arrival of our little bundle of joy!",
   links: [
     {
-      name: "Twitter",
-      url: "https://twitter.com/hangerthem",
-      icon: Twitter,
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/hangerthem",
-      icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/",
-      icon: Linkedin,
-    },
-    {
-      name: "Email",
+      name: "Shower RSVP",
       url: "mailto:f.borisjuk@hangerthem.com",
       icon: EnvelopeFill,
     },
     {
-      name: "Telegram",
-      url: "https://t.me/hangerthem",
-      icon: Telegram,
+      name: "Baby List Registry",
+      url: "https://twitter.com/hangerthem",
+      icon: Twitter,
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/ferda_borisjuk/",
-      icon: Instagram,
+      name: "Amazon Registry",
+      url: "https://github.com/hangerthem",
+      icon: Github,
     },
     {
-      name: "Messenger",
-      url: "https://m.me/frant.borisjukovic",
-      icon: Messenger,
-    },
-    {
-      name: "Spotify",
-      url: "https://open.spotify.com/user/jiguc8apyguwslzwptmx0e4zn",
-      icon: Spotify,
-    },
-    {
-      name: "Discord",
-      url: "https://discord.com/users/495134242825699328",
-      icon: Discord,
-    },
-    {
-      name: "Blog",
-      url: "https://blog.hangerthem.com",
-      icon: JournalAlbum,
+      name: "Target Registry",
+      url: "https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/",
+      icon: Linkedin,
     },
   ],
   sortByLength: true,
