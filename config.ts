@@ -18,7 +18,7 @@ const data: Data = {
     nameRandomizer: false,
   },
   name: "Hagen Baby Shower",
-  description: "Welcome to the official baby shower site for Hagen! Here you'll find all the details about the upcoming celebration, including date, location, and gift ideas. We're excited to share this special moment with friends and family. Join us in celebrating the arrival of our little bundle of joy!",
+  description: "Welcome to the official baby shower site for Hagen!\nHere you'll find all the details about the upcoming celebration,\nincluding date, location, and gift ideas.\We're excited to share this special moment with friends and family.\nJoin us in celebrating the arrival of our little bundle of joy!",
   links: [
     {
       name: "Shower RSVP",
