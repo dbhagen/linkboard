@@ -32,12 +32,12 @@ const data: Data = {
     },
     {
       name: "Amazon Registry",
-      url: "https://www.target.com/gift-registry/gift/kirsten-and-daniel-1baby",
+      url: "#amazon",
       icon: JournalAlbum,
     },
     {
       name: "Target Registry",
-      url: "https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/",
+      url: "https://www.target.com/gift-registry/gift/kirsten-and-daniel-1baby",
       icon: JournalAlbum,
     },
   ],
