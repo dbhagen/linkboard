@@ -21,24 +21,24 @@ const data: Data = {
   description: "", //Welcome to the official baby shower site for Hagen!\nHere you'll find all the details about the upcoming celebration,\nincluding date, location, and gift ideas.\We're excited to share this special moment with friends and family.\nJoin us in celebrating the arrival of our little bundle of joy!
   links: [
     {
-      name: "Shower RSVP",
-      url: "mailto:f.borisjuk@hangerthem.com",
-      icon: EnvelopeFill,
+      name: "Shower info",
+      url: "#info",
+      icon: JournalAlbum,
     },
     {
       name: "Baby List Registry",
       url: "https://twitter.com/hangerthem",
-      icon: Twitter,
+      icon: Gift,
     },
     {
       name: "Amazon Registry",
       url: "https://github.com/hangerthem",
-      icon: Github,
+      icon: Gift,
     },
     {
       name: "Target Registry",
       url: "https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/",
-      icon: Linkedin,
+      icon: Gift,
     },
   ],
   sortByLength: true,
