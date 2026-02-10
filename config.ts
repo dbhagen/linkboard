@@ -1,15 +1,4 @@
-import {
-  Twitter,
-  Github,
-  Linkedin,
-  EnvelopeFill,
-  Telegram,
-  Instagram,
-  Messenger,
-  Spotify,
-  Discord,
-  JournalAlbum,
-} from "react-bootstrap-icons";
+import { InfoCircle, Gift, Amazon, Bullseye } from "react-bootstrap-icons";
 
 const data: Data = {
   title: "Hagen Baby Boy Shower Site",
@@ -23,22 +12,22 @@ const data: Data = {
     {
       name: "Shower info",
       url: "#info",
-      icon: JournalAlbum,
+      icon: InfoCircle,
     },
     {
       name: "Baby List Registry",
       url: "https://www.babylist.com/list/kirsten-daniel-hagen",
-      icon: JournalAlbum,
+      icon: Gift,
     },
     {
       name: "Amazon Registry",
-      url: "#amazon",
-      icon: JournalAlbum,
+      url: "https://www.amazon.com/baby-reg/kirsten-hagen-daniel-hagen-april-2026-austin/4FDQ2UR9GX5L",
+      icon: Amazon,
     },
     {
       name: "Target Registry",
       url: "https://www.target.com/gift-registry/gift/kirsten-and-daniel-1baby",
-      icon: JournalAlbum,
+      icon: Bullseye,
     },
   ],
   sortByLength: true,

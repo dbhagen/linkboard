@@ -67,7 +67,6 @@ export default function ShareBar() {
         <ShareLinksContainer $open={shareOptionsOpen}>
           <QrCode onClick={handleOpenOR} title="QR Code" />
           <Link45deg onClick={handleCopyLink} title="Copy Link" />
-          <CodeSquare onClick={handleCopyEmbed} title="Copy Embed" />
         </ShareLinksContainer>
         <ShareTrigger onClick={handleOpenShareOptions}>
           <Share style={{ zIndex: 1000 }} />

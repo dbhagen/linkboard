@@ -33,6 +33,16 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
+export const CardContainer = styled.div`
+  ${flexCenter}
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(70, 120, 200, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+`;
+
 export const HeaderContainer = styled.div`
   ${flexCenter}
   gap: 1rem;
@@ -128,7 +138,7 @@ export const LinkContainer = styled.div<LinkContainerProps>`
   width: 350px;
   height: 50px;
   border-radius: 10px;
-  background-color: rgba(${({ theme }) => theme.colors.background}, 0.2);
+  background-color: rgba(${({ theme }) => theme.colors.background}, 0.45);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(${({ theme }) => theme.colors.border}, 0.5);
   text-align: center;
@@ -145,7 +155,7 @@ export const LinkContainer = styled.div<LinkContainerProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(${({ theme }) => theme.colors.text}, 0.8);
+    color: rgba(${({ theme }) => theme.colors.text}, 1);
     text-decoration: none;
     opacity: 0;
     animation: ${fadeIn} 0.5s ease-out forwards;
@@ -164,7 +174,7 @@ export const LinkContainer = styled.div<LinkContainerProps>`
 
   &:hover {
     transform: scale(1.05) !important;
-    background-color: rgba(${({ theme }) => theme.colors.background}, 0.3);
+    background-color: rgba(${({ theme }) => theme.colors.background}, 0.6);
     border: 1px solid rgba(${({ theme }) => theme.colors.border}, 0.8);
     cursor: pointer;
   }

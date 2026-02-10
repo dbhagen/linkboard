@@ -14,11 +14,11 @@ interface Themes {
 export const themes: Themes = {
   default: {
     colors: {
-      title: "225, 225, 225",
-      text: "200, 200, 200",
+      title: "35, 75, 140",
+      text: "255, 255, 255",
       image: "40, 40, 40",
-      background: "20, 20, 20",
-      border: "100, 100, 100",
+      background: "45, 85, 155",
+      border: "70, 120, 200",
     },
     fonts: ["K2D", "sans-serif"],
   },

@@ -12,7 +12,7 @@ const slideIn = keyframes`
 	}
 	to {
 		transform: translateX(0);
-		width: 100px;
+		width: 60px;
 		padding-inline: 1rem .5rem;
 	}
 `;
@@ -20,7 +20,7 @@ const slideIn = keyframes`
 const slideOut = keyframes`
 	from {
 		transform: translateX(0);
-		width: 100px;
+		width: 60px;
 		padding-inline: 1rem .5rem;
 	}
 	to {
@@ -38,7 +38,7 @@ export const ShareBarContainer = styled.button`
   border: 1px solid rgba(${({ theme }) => theme.colors.border}, 0.5);
   border-radius: 20px;
   align-items: center;
-  color: rgba(${({ theme }) => theme.colors.title});
+  color: rgba(${({ theme }) => theme.colors.text}, 1);
   position: absolute;
   padding: 0;
   margin: 0;

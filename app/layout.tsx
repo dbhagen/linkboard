@@ -7,17 +7,16 @@ import '@/styles/normalize.css';
 
 export const metadata: Metadata = {
   title: data.title,
-  icons: ['/profile.jpg'],
-  description: 'A link board, like a bulletin board, but for links.',
-  authors: [
-    {
-      name: 'HangerThem',
-      url: 'https://hangerthem.com',
+  icons: ['/profile.webp'],
+  description: 'Hagen Baby Shower - registry links and shower details.',
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
     },
-  ],
-  keywords: ['link', 'board', 'linkboard', 'bulletin', 'bulletin'],
-  creator: 'HangerThem',
-  publisher: 'HangerThem',
+  },
 };
 
 export default function RootLayout({
