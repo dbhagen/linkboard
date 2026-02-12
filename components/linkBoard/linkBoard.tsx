@@ -6,6 +6,8 @@ import {
   HeaderContainer,
   InfoContainer,
   ProfilePicture,
+  HeaderImage,
+  ImageOverlay,
   Name,
   Description,
   LinksContainer,
@@ -19,9 +21,16 @@ import nameRandomizer from "@/utils/nameRandomizer";
 import Loading from "@/components/loading/loading";
 import Source from "@/components/source/source";
 
-export default function LinkBoard() {
+interface LinkBoardProps {
+  headerImage?: string;
+  excludeLinks?: string[];
+  children?: React.ReactNode;
+}
+
+export default function LinkBoard({ headerImage, excludeLinks, children }: LinkBoardProps) {
   const [loading, setLoading] = useState(true);
   const [randomizedName, setRandomizedName] = useState(data.name);
+  const [imageExpanded, setImageExpanded] = useState(false);
 
   useEffect(() => {
     setLoading(false);
@@ -35,23 +44,40 @@ export default function LinkBoard() {
 
   if (loading) return <Loading />;
 
+  const links = excludeLinks
+    ? data.links.filter((link) => !excludeLinks.includes(link.name))
+    : data.links;
+
   return (
     <Container>
       <ShareBar />
       <CardContainer>
         <HeaderContainer>
-          <ProfilePicture
-            src="/profile.webp"
-            alt="Profile"
-            width={150}
-            height={150}
-          />
-          <InfoContainer>
-            <Name>{randomizedName}</Name>
-          </InfoContainer>
+          {headerImage ? (
+            <HeaderImage
+              src={headerImage}
+              alt="Header"
+              width={350}
+              height={500}
+              onClick={() => setImageExpanded(true)}
+            />
+          ) : (
+            <ProfilePicture
+              src="/profile.webp"
+              alt="Profile"
+              width={150}
+              height={150}
+            />
+          )}
+          {!headerImage && (
+            <InfoContainer>
+              <Name>{randomizedName}</Name>
+            </InfoContainer>
+          )}
         </HeaderContainer>
-        <LinksContainer $linksNumber={data.links.length}>
-          {data.links.map((link, index) => (
+        {children}
+        <LinksContainer $linksNumber={links.length}>
+          {links.map((link, index) => (
             <LinkContainer key={link.url} $delay={index * 100}>
               <Link href={link.url}>
                 {link.icon && <link.icon />}
@@ -61,6 +87,11 @@ export default function LinkBoard() {
           ))}
         </LinksContainer>
       </CardContainer>
+      {imageExpanded && headerImage && (
+        <ImageOverlay onClick={() => setImageExpanded(false)}>
+          <img src={headerImage} alt="Header" />
+        </ImageOverlay>
+      )}
     </Container>
   );
 }

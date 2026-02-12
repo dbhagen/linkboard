@@ -11,7 +11,7 @@ const data: Data = {
   links: [
     {
       name: "Shower info",
-      url: "#info",
+      url: "/shower",
       icon: InfoCircle,
     },
     {
