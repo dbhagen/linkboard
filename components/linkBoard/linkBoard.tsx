@@ -16,6 +16,7 @@ import {
   CardContainer,
 } from "@/components/linkBoard/linkBoardStyles";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import ShareBar from "@/components/sharebar/sharebar";
 import nameRandomizer from "@/utils/nameRandomizer";
 import Loading from "@/components/loading/loading";
@@ -28,6 +29,7 @@ interface LinkBoardProps {
 }
 
 export default function LinkBoard({ headerImage, excludeLinks, children }: LinkBoardProps) {
+  const pathname = usePathname();
   const [loading, setLoading] = useState(true);
   const [randomizedName, setRandomizedName] = useState(data.name);
   const [imageExpanded, setImageExpanded] = useState(false);
@@ -49,7 +51,7 @@ export default function LinkBoard({ headerImage, excludeLinks, children }: LinkB
     : data.links;
 
   return (
-    <Container>
+    <Container key={pathname}>
       <ShareBar />
       <CardContainer>
         <HeaderContainer>

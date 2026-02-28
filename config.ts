@@ -6,16 +6,21 @@ const data: Data = {
   animation: {
     nameRandomizer: false,
   },
-  name: "Hagen Baby Shower",
+  name: "Baby Hagen Info",
   description: "", //Welcome to the official baby shower site for Hagen!\nHere you'll find all the details about the upcoming celebration,\nincluding date, location, and gift ideas.\We're excited to share this special moment with friends and family.\nJoin us in celebrating the arrival of our little bundle of joy!
   links: [
     {
-      name: "Shower info",
+      name: "Women's Shower Info",
       url: "/shower",
       icon: InfoCircle,
     },
     {
-      name: "Baby List Registry",
+      name: "Hagen Family Shower",
+      url: "/hagen-family-shower",
+      icon: InfoCircle,
+    },
+    {
+      name: "BabyList for Contribution Gift Funds",
       url: "https://www.babylist.com/list/kirsten-daniel-hagen",
       icon: Gift,
     },
@@ -30,7 +35,7 @@ const data: Data = {
       icon: Bullseye,
     },
   ],
-  sortByLength: true,
+  sortByLength: false,
 };
 
 export default data;

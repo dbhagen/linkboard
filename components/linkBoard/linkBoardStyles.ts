@@ -20,6 +20,15 @@ const fadeIn = keyframes`
 	}
 `;
 
+const scaleIn = keyframes`
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+`;
+
 const flexCenter = css`
   display: flex;
   flex-direction: column;
@@ -30,8 +39,9 @@ const flexCenter = css`
 export const Container = styled.div`
   ${flexCenter}
   gap: 1rem;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 2rem 0;
+  box-sizing: border-box;
 `;
 
 export const CardContainer = styled.div`
@@ -42,6 +52,7 @@ export const CardContainer = styled.div`
   border: 1px solid rgba(70, 120, 200, 0.3);
   border-radius: 20px;
   padding: 2rem;
+  min-width: 460px;
 `;
 
 export const HeaderContainer = styled.div`
@@ -210,18 +221,8 @@ export const Description = styled.p`
 export const LinksContainer = styled.div<LinksContainerProps>`
   ${flexCenter}
   gap: 10px;
-  height: 0;
-  animation: scaleUp 0.5s ease-out forwards;
-  animation-delay: 1000ms;
-
-  @keyframes scaleUp {
-    from {
-      height: 0;
-    }
-    to {
-      height: ${({ $linksNumber }) => $linksNumber * 65 - 15}px;
-    }
-  }
+  height: ${({ $linksNumber }) => $linksNumber * 60 - 10}px;
+  overflow: hidden;
 `;
 
 export const LinkContainer = styled.div<LinkContainerProps>`
@@ -239,7 +240,7 @@ export const LinkContainer = styled.div<LinkContainerProps>`
   font-family: ${({ theme }) => theme.fonts.join(", ")};
   display: flex;
   transform: scaleX(0);
-  animation: scaleIn 1s ease-out forwards;
+  animation: ${scaleIn} 1s ease-out forwards;
   animation-delay: ${({ $delay }) => $delay + 1000}ms;
 
   a {
@@ -254,16 +255,6 @@ export const LinkContainer = styled.div<LinkContainerProps>`
     opacity: 0;
     animation: ${fadeIn} 0.5s ease-out forwards;
     animation-delay: ${(props) => props.$delay + 1250}ms;
-  }
-
-  @keyframes scaleIn {
-    from {
-      transform: scaleX(0);
-      display: flex;
-    }
-    to {
-      transform: scaleX(1);
-    }
   }
 
   &:hover {
