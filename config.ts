@@ -1,4 +1,4 @@
-import { InfoCircle, Gift, Amazon, Bullseye } from "react-bootstrap-icons";
+import { Gift, Amazon, Bullseye } from "react-bootstrap-icons";
 
 const data: Data = {
   title: "Hagen Baby Boy Shower Site",
@@ -9,16 +9,6 @@ const data: Data = {
   name: "Baby Hagen Info",
   description: "", //Welcome to the official baby shower site for Hagen!\nHere you'll find all the details about the upcoming celebration,\nincluding date, location, and gift ideas.\We're excited to share this special moment with friends and family.\nJoin us in celebrating the arrival of our little bundle of joy!
   links: [
-    {
-      name: "Women's Shower Info",
-      url: "/shower",
-      icon: InfoCircle,
-    },
-    {
-      name: "Hagen Family Shower",
-      url: "/hagen-family-shower",
-      icon: InfoCircle,
-    },
     {
       name: "BabyList for Contribution Gift Funds",
       url: "https://www.babylist.com/list/kirsten-daniel-hagen",
